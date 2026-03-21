@@ -4,6 +4,7 @@ import styles from './Alunos.module.css'
 function Alunos(){    
 
     const [alunos, setAlunos] = useState([]);
+    const [busca, setBusca] = useState('');
     const [loading, setLoading] = useState(true);
 
     useEffect( ()=> {
@@ -24,6 +25,8 @@ function Alunos(){
 
     }, []);
 
+    const alunosFiltrados = alunos.filter(aluno => aluno.nome.toLowerCase().includes(busca.toLowerCase()));
+
     if(loading){
         return <p className={styles.loading}>Carregando alunos...</p>
     }
@@ -32,7 +35,9 @@ function Alunos(){
         <div className={styles.container}>
             <h1>Lista de Alunos</h1>
 
-            {alunos.length === 0 ? (<p className={styles.vazio}>Nenhum aluno encontrado.</p>) 
+            <input type="text" placeholder="Buscar aluno" value={busca} onChange={(e) => setBusca(e.target.value)} className={styles.busca} />
+
+            {alunosFiltrados.length === 0 ? (<p className={styles.vazio}>Nenhum aluno encontrado.</p>) 
             : (
                 <table className={styles.tabela}>
                     <thead>
@@ -43,7 +48,7 @@ function Alunos(){
                         </tr>
                     </thead>
                     <tbody>
-                        {alunos.map(aluno => (
+                        {alunosFiltrados.map(aluno => (
                             <tr key={aluno.id}>
                                 <td>{aluno.id}</td>
                                 <td>{aluno.nome}</td>
