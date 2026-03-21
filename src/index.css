@@ -1,13 +1,58 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.light {
+  background-color: #f4f6f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: #1a1a2e;
+  color: #eee;
+  min-height: 100vh;
+}
+
+.dark header {
+  background-color: #16213e;
+}
+
+.dark footer {
+  background-color: #16213e;
+}
+
+.dark main {
+  background-color: #1a1a2e;
+}
+
+.dark table {
+  color: #eee;
+}
+
+.dark input {
+  background-color: #16213e;
+  color: #eee;
+  border-color: #444;
+}
+
+.dark button {
+  background-color: #0f3460;
+  color: #eee;
+}
+
+.dark .card,
+.dark div[class*="card"] {
+  background-color: #16213e;
+  color: #eee;
 }
