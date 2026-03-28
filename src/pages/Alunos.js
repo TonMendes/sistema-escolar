@@ -1,33 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./Alunos.module.css";
+import db from "../db.json";
 
 function Alunos() {
-  const [alunos, setAlunos] = useState([]);
+  const [alunos] = useState(db.alunos);
   const [busca, setBusca] = useState("");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("http://localhost:5001/alunos")
-        .then((resp) => resp.json())
-        .then((data) => {
-          setAlunos(data);
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.log(err);
-          setLoading(false);
-        });
-    }, 2000);
-  }, []);
 
   const alunosFiltrados = alunos.filter((aluno) =>
     aluno.nome.toLowerCase().includes(busca.toLowerCase()),
   );
-
-  if (loading) {
-    return <p className={styles.loading}>Carregando alunos...</p>;
-  }
 
   return (
     <div className={styles.container}>
