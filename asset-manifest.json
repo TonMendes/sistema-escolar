@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sistema-escolar/static/css/main.3f8cbbfa.css",
+    "main.css": "/sistema-escolar/static/css/main.725d0329.css",
     "main.js": "/sistema-escolar/static/js/main.c4e62ccd.js",
     "index.html": "/sistema-escolar/index.html",
-    "main.3f8cbbfa.css.map": "/sistema-escolar/static/css/main.3f8cbbfa.css.map",
+    "main.725d0329.css.map": "/sistema-escolar/static/css/main.725d0329.css.map",
     "main.c4e62ccd.js.map": "/sistema-escolar/static/js/main.c4e62ccd.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f8cbbfa.css",
+    "static/css/main.725d0329.css",
     "static/js/main.c4e62ccd.js"
   ]
 }
