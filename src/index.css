@@ -56,3 +56,21 @@ code {
   background-color: #16213e;
   color: #eee;
 }
+
+.dark div[class*="container"] {
+  background-color: #16213e;
+  color: #eee;
+}
+
+.dark div[class*="item"] {
+  background-color: #0f3460;
+  color: #eee;
+}
+
+.dark h1 {
+  color: #eee;
+}
+
+.dark label {
+  color: #eee;
+}
